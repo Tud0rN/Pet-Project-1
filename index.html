@@ -6,17 +6,42 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>E-commerce Platform Testing - CEL Romania</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        * {
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
             color: #333;
+            background-color: #f9f9f9;
+            line-height: 1.6;
+            margin: 0;
+        }
+        ul, ol {
+            padding: 0 10px 10px 30px;
+        }
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px 10px;
+            text-align: center;
+        }
+
+        header h2 {
+            font-size: 1.2rem;
+            margin: 0;
+        }
+
+        h2 {
+            font-size: 1.2rem;
+            margin: 30px 0 20px;
         }
         .container {
-            width: 80%;
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 20px 50px;
             background-color: #fff;
         }
         h1 {
@@ -29,7 +54,6 @@
             margin-bottom: 20px;
         }
         .links a {
-            color: #3498db;
             text-decoration: none;
             margin: 0 10px;
         }
@@ -39,80 +63,121 @@
         .section-title {
             font-size: 20px;
             font-weight: bold;
-            margin-top: 30px;
+            margin: 10px 0;
+        }
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 20px;
+        }
+
+        .project-card {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-card h4 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            header h2 {
+                font-size: 1rem;
+            }
+            .container {
+                width: 100%;
+                padding: 5px;
+            }
+            .projects {
+                grid-template-columns: none;
+            }
+
         }
     </style>
 </head>
 <body>
+<header>
+    <h2>Tudor Nicoara: CEL Romania Project</h2>
+</header>
 
 <div class="container">
-    <h1>E-commerce Platform Testing - CEL Romania</h1>
+    <h1>E-commerce Platform Testing -
+        <a href="https://www.cel.ro/"
+           target="_blank"
+           style="text-decoration: none">
+            <img src="https://s1.cel.ro/images/logo/cel.png" width="72" height="20">
+        </a>
+        Romania</h1>
     
-<h2>📢 CEL.ro Marketplace – Evolution and Features</h2>
+<h2>📢 <a href="https://www.cel.ro/"
+          target="_blank"
+          style="text-decoration: none">
+    <img src="https://s1.cel.ro/images/logo/cel.png" width="72" height="20">
+</a> Marketplace – Evolution and Features</h2>
 
 <p>An online retailer that has evolved into a marketplace, <strong>CEL.ro</strong> has reported an investment of over <strong>€500,000</strong>,
     in technology and platform development in its current form.</p>
+    <p>Currently,<strong>CEL.ro</strong> is only competitive with Romanian marketplaces that focus on electronics and home appliances.</p>
 
-<h3>📌 General Information</h3>
+
+    <p class="section-title">📌 General Product Information:</p>
 <ul>
-    <li><strong>Launched:</strong> 2005</li>
-    <li><strong>Listed Products:</strong> Over 1 million</li>
-    <li><strong>Daily Customers:</strong> Over 100,000</li>
-    <li><strong>Costs or Fees:</strong> Commission per delivery</li>
-    <li><strong>Specialization:</strong> IT/Tech</li>
-    <li><strong>Registration Process:</strong> Sign-up with an email address and phone number</li>
+    <li>Launched: 2005</li>
+    <li>Listed Products: Over 1 million</li>
+    <li>Daily Customers: Over 100,000</li>
+    <li>Costs or Fees: Commission per delivery</li>
+    <li>Specialization: IT/Tech</li>
+    <li>Registration Process: Sign-up with an email address and phone number</li>
 </ul>
 
-<h3>✅ Advantages of CEL.ro Marketplace</h3>
-<ul>
-    <li><strong>Low competition</strong> – The platform currently has around 800 partner merchants, meaning less competition for your store.</li>
-    <li><strong>Extended order control</strong> – API integrations provide significant control over order management.</li>
-    <li><strong>Compatibility with other platforms</strong> – The CEL.ro API is fully compatible with competitor marketplace applications.</li>
-</ul>
+<h2>For the
+    <a href="https://www.cel.ro/"
+       target="_blank"
+       style="text-decoration: none">
+        <img src="https://s1.cel.ro/images/logo/cel.png" width="72" height="20">
+    </a>
+    following testing processes and procedures have been established: </h2>
 
-<h3>❌ Disadvantages of CEL.ro Marketplace</h3>
-<ul>
-    <li><strong>Limited product niche</strong> – If you don’t sell electronics or home appliances, CEL.ro may not be the right fit for you.</li>
-    <li><strong>Smaller audience</strong> – While there is less competition, the number of buyers is also lower compared to larger marketplaces.</li>
-</ul>
-
-<h3>🌟 Key Takeaway</h3>
-<p>Currently,<strong>CEL.ro</strong> is only competitive with Romanian marketplaces that focus on electronics and home appliances.</p>
-
-<p>The <strong>biggest benefit</strong> of the platform is the <strong>easy order management</strong> through its <strong>user-friendly native API</strong>. 
-    In addition to API integration, its <strong>seller features</strong> include:</p>
-
-<ul>
-    <li>SMS notifications</li>
-    <li>Automatic invoice generation system</li>
-    <li>Seamless integration with courier companies</li>
-</ul>
-
-<h2>For the CEL.ro marketplace following testing processes and procedures have been established: </h2>
-    
-<p> 
-</p>
-    <p class="section-title">📋 Created Test Plan and Test Cases</p>
-<ul>
-    <li>Developed a detailed test plan based on customer requirements for functional testing of the CEL e-commerce platform.</li>
-    <li>Created a testing checklist outlining intended test cases for cross-browser testing.</li>
-    <li>Test cases were executed and documented based on their priority and software stage availability.</li>
-    <li>Designed test cases to ensure full coverage of requirements specified in the e-commerce platform test plan.</li>
-</ul>
-
-    <p class="section-title">🐞 Issue Management</p>
-<ul>
-    <li> Processes of bug tracking and issue management were handled in Jira.</li>
-    <li> The project follow-up and storing of information and documents, was conducted on the Confluence platform.</li>
-</ul>
-    <p class="section-title">🔗 View Project Documentation</p>
-    <div class="links">
-        <p><a href="https://docs.google.com/document/d/1HfxNfyOpf038wAne4Sg-Tylw41tphXev/edit?usp=sharing&ouid=116659881787111771557&rtpof=true&sd=true" target="_blank">Test Plan CEL.ro</a></p>
-        <p><a href="https://docs.google.com/spreadsheets/d/1CvNhvKnyj1dmOq0P0XI2VJjq0XckOFT64nD0MvfvGu0/edit?usp=sharing" target="_blank">Testing Checklist CEL.ro</a></p>
-        <p><a href="https://docs.google.com/spreadsheets/d/1cI-d1N0v0GG3iXqKg11cXMMTlE7J_kglxsYwqGGWAbY/edit?usp=sharing" target="_blank">Test Cases CEL.ro</a></p>
-        <p><a href="https://tudorn.atlassian.net/wiki/x/AQBO" target="_blank">Confluence CEL.ro Project Follow-up</a></p>
-        <p><a href="https://tudorn.atlassian.net/jira/software/projects/SCRUM/boards/1?atlOrigin=eyJpIjoiYjljMzkzNDg2MDc3NDA3ZmE3MGYzOGJlNjA2YzZhYWQiLCJwIjoiaiJ9" target="_blank">Jira Issue Management</a></p>
+    <div class="projects">
+        <div class="project-card">
+            <p class="section-title">📋 Created Test Plan and Test Cases</p>
+            <ul>
+                <li>Developed a detailed test plan based on customer requirements for functional testing of the CEL e-commerce platform.</li>
+                <li>Created a testing checklist outlining intended test cases for cross-browser testing.</li>
+                <li>Test cases were executed and documented based on their priority and software stage availability.</li>
+                <li>Designed test cases to ensure full coverage of requirements specified in the e-commerce platform test plan.</li>
+            </ul>
+        </div>
+        <div class="project-card">
+            <p class="section-title">🐞 Issue Management</p>
+            <ul>
+                <li> Processes of bug tracking and issue management were handled in Jira.</li>
+                <li> The project follow-up and storing of information and documents, was conducted on the Confluence platform.</li>
+            </ul>
+        </div>
     </div>
+
+    <p class="section-title">🔗 View Project Documentation</p>
+    <ol class="links">
+        <li><a href="https://docs.google.com/document/d/1HfxNfyOpf038wAne4Sg-Tylw41tphXev/edit?usp=sharing&ouid=116659881787111771557&rtpof=true&sd=true" target="_blank">Test Plan CEL.ro</a></li>
+        <li><a href="https://docs.google.com/spreadsheets/d/1CvNhvKnyj1dmOq0P0XI2VJjq0XckOFT64nD0MvfvGu0/edit?usp=sharing" target="_blank">Testing Checklist CEL.ro</a></li>
+        <li><a href="https://docs.google.com/spreadsheets/d/1cI-d1N0v0GG3iXqKg11cXMMTlE7J_kglxsYwqGGWAbY/edit?usp=sharing" target="_blank">Test Cases CEL.ro</a></li>
+        <li><a href="https://tudorn.atlassian.net/wiki/x/AQBO" target="_blank">Confluence CEL.ro Project Follow-up</a></li>
+        <li><a href="https://tudorn.atlassian.net/jira/software/projects/SCRUM/boards/1?atlOrigin=eyJpIjoiYjljMzkzNDg2MDc3NDA3ZmE3MGYzOGJlNjA2YzZhYWQiLCJwIjoiaiJ9" target="_blank">Jira Issue Management</a></li>
+    </ol>
 </div>
 
 </body>
